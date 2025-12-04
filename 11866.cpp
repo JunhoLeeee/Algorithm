@@ -4,6 +4,11 @@
 using namespace std;
 
 int main(){
+
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    
     int n, k;
     int value; 
     cin >> n >> k ;
@@ -23,9 +28,15 @@ int main(){
         q.pop();
     }
 
-    for(int i=0; i<n; i++){
-        cout << save.front() << ", ";
+    cout << "<";
+
+    while(!save.empty()){ 
+        cout << save.front();
         save.pop();
+
+        if(!save.empty()) cout << ", ";
     }
+
+    cout << ">";
     return 0; 
 }
