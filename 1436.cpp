@@ -2,9 +2,10 @@
 #include <string>
 
 using namespace std;
+
 bool is_num(int n){
     string s = to_string(n);
-    if(s.find("666") != string::npos){
+    if(s.find("666") != -1){
         return true;
     }
     return false;
